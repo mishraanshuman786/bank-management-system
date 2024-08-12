@@ -26,7 +26,7 @@ const UpdateCustomer = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5000/api/update`, {
+      const response = await fetch(`/api/update`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -47,9 +47,7 @@ const UpdateCustomer = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await fetch(
-        `http://localhost:5000/api/customers/${accountNumber}`
-      );
+      const response = await fetch(`/api/customers/${accountNumber}`);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }

@@ -13,9 +13,7 @@ const DeleteTransaction = () => {
     setError(null);
 
     try {
-      let response = await fetch(
-        `http://localhost:5000/api/get-transaction/${transactionId}`
-      );
+      let response = await fetch(`/api/get-transaction/${transactionId}`);
       if (response.status === 200) {
         response = await response.json();
         setTransaction(response.data);
@@ -36,12 +34,9 @@ const DeleteTransaction = () => {
     setError(null);
 
     try {
-      const response = await fetch(
-        `http://localhost:5000/api/delete-transaction/${transactionId}`,
-        {
-          method: "DELETE",
-        }
-      );
+      const response = await fetch(`/api/delete-transaction/${transactionId}`, {
+        method: "DELETE",
+      });
       if (response.status === 200) {
         alert("Transaction deleted successfully!");
         setTransaction(null);

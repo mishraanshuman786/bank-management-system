@@ -9,7 +9,7 @@ const DeleteCustomer = () => {
   const [success, setSuccess] = useState("");
 
   const handleSearch = async () => {
-    const apiUrl = `http://localhost:5000/api/customers/${accountNumber}`;
+    const apiUrl = `/api/customers/${accountNumber}`;
 
     try {
       const response = await fetch(apiUrl);
@@ -28,7 +28,7 @@ const DeleteCustomer = () => {
   };
 
   const handleDelete = async () => {
-    const apiUrl = `http://localhost:5000/api/delete/${accountNumber}`;
+    const apiUrl = `/api/delete/${accountNumber}`;
 
     try {
       const response = await fetch(apiUrl, { method: "DELETE" });

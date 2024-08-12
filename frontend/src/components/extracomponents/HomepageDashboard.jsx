@@ -10,9 +10,7 @@ const HomepageDashboard = () => {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const response = await fetch(
-          "http://localhost:5000/api/get-transactions"
-        );
+        const response = await fetch("/api/get-transactions");
         if (response.status === 200) {
           const data = await response.json();
           setTransactions(data.data);

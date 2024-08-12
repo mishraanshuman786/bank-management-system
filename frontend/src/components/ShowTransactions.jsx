@@ -9,9 +9,7 @@ const ShowTransactions = () => {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        let response = await fetch(
-          "http://localhost:5000/api/get-transactions"
-        );
+        let response = await fetch("/api/get-transactions");
         if (!(response.status === 200))
           throw new Error("Failed to fetch transactions");
         const data = await response.json();

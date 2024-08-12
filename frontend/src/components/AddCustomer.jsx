@@ -35,7 +35,7 @@ function AddCustomer() {
 
     try {
       console.log("form", formattedForm);
-      const response = await fetch("http://localhost:5000/api/add", {
+      const response = await fetch("/api/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

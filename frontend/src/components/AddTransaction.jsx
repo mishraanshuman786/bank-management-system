@@ -14,7 +14,7 @@ const AddTransaction = () => {
     // Fetch account list on component mount
     const fetchAccounts = async () => {
       try {
-        let response = await fetch("http://localhost:5000/api/customers");
+        let response = await fetch("/api/customers");
         if (!response.ok) throw new Error("Failed to fetch accounts");
         response = await response.json();
         setAccounts(response.data);
@@ -37,7 +37,7 @@ const AddTransaction = () => {
     setSuccess(null);
 
     try {
-      const response = await fetch("http://localhost:5000/api/transactions", {
+      const response = await fetch("/api/transactions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -9,7 +9,7 @@ const SearchCustomer = () => {
 
   const handleSearch = async () => {
     // Replace this URL with your API endpoint
-    const apiUrl = `http://localhost:5000/api/customers/${accountNumber}`;
+    const apiUrl = `/api/customers/${accountNumber}`;
 
     try {
       const response = await fetch(apiUrl);
