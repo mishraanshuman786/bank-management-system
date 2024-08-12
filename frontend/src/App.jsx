@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AddCustomer from "./components/AddCustomer";
 import ViewCustomers from "./components/ViewCustomers";
-import HandleTransactions from "./components/HandleTransactions";
+
 import Homepage from "./components/Homepage";
 import UpdateCustomer from "./components/UpdateCustomer";
 import SearchCustomer from "./components/SearchCustomer";
