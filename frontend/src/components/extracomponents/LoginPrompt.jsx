@@ -43,6 +43,7 @@ const LoginPrompt = ({ onSuccess }) => {
             Please enter your User ID to access the system. Ensure you have the
             correct credentials to proceed.
           </p>
+          <p>Hint: {correctUserID}</p>
           <button
             onClick={handleLogin}
             className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
